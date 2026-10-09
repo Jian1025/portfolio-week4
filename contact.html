@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me — Xiangyi Jian</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="dot"></span> Xiangyi Jian</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>Let's Connect</h1>
+        <p>Have a project in mind, a question, or just want to say hi? I'd love to hear from you.</p>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="contact-grid">
+
+        <!-- Contact info -->
+        <div class="contact-info">
+
+          <div class="contact-card">
+            <div class="icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:hello@alexmorgan.dev">hello@alexmorgan.dev</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>Portland, Oregon (working remotely worldwide)</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon">🐦</div>
+            <div>
+              <h4>Social</h4>
+              <a href="#">@alexmorgan</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon">💼</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="#">linkedin.com/in/alexmorgan</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact form -->
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks for reaching out! I\'ll get back to you soon. 😊');">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Let's work together!" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me a little about what you have in mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message ✨</button>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="fun-fact">
+        <strong>Fun fact about me:</strong> I once got lost in a bookstore for four hours and came out with a bigger smile (and a much lighter wallet). 📚
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+      <p class="copy">© 2026 Xiangyi Jian. Made with warmth &amp; curiosity.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

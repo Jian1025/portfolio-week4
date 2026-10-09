@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List — Xiangyi Jian</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="dot"></span> Xiangyi Jian</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>My To-Do List</h1>
+        <p>Pick a date, jot down a task, and stay on top of things. Simple, clean, and always with you.</p>
+      </div>
+    </header>
+
+    <section class="container" style="padding-bottom: 40px;">
+      <div class="todo-app">
+        <div class="todo-input-row">
+          <input type="date" id="todo-date" aria-label="Task date" />
+          <input type="text" id="todo-task" placeholder="Enter a task..." aria-label="Task description" />
+          <button id="todo-add" class="btn btn-primary">Add</button>
+        </div>
+        <div class="todo-options-row">
+          <div class="emoji-picker" id="emoji-picker" role="group" aria-label="Pick an emoji">
+            <button type="button" class="emoji-btn selected" data-emoji="" title="No emoji">—</button>
+            <button type="button" class="emoji-btn" data-emoji="😊" title="Smile">😊</button>
+            <button type="button" class="emoji-btn" data-emoji="📌" title="Pin">📌</button>
+            <button type="button" class="emoji-btn" data-emoji="🔥" title="Hot">🔥</button>
+            <button type="button" class="emoji-btn" data-emoji="💡" title="Idea">💡</button>
+            <button type="button" class="emoji-btn" data-emoji="🎯" title="Goal">🎯</button>
+            <button type="button" class="emoji-btn" data-emoji="⭐" title="Star">⭐</button>
+          </div>
+          <select id="todo-priority" class="priority-select" aria-label="Priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div id="todo-counter" class="todo-counter">0 of 0 tasks completed</div>
+        <p id="todo-status" class="todo-status hidden"></p>
+        <ul id="todo-list" class="todo-list"></ul>
+        <p id="todo-empty" class="todo-empty">No tasks yet. Add one above! ✨</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="fun-fact">
+        <strong>Fun fact about me:</strong> I once got lost in a bookstore for four hours and came out with a bigger smile (and a much lighter wallet). 📚
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+      <p class="copy">© 2026 Xiangyi Jian. Made with warmth &amp; curiosity.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/todo.js?v=5"></script>
+</body>
+</html>
